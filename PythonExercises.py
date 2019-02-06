@@ -63,3 +63,15 @@ print("The distance in feet: ", feet)
 
 inches = meters * 39.3700787
 print("The distance in inches: ", inches)
+
+# exercise 1.4
+
+userinput = input("Write an amount: ")
+amount = userinput
+
+userinput = input("Write a yearly interest: ")
+interest = userinput
+
+for x in range(0, 10):
+    fortune = float(amount) * (1 + float(interest)) ** x
+    print("Your fortune after ", x, " year(s) is: ", "%.2f" % (fortune))
