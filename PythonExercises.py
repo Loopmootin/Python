@@ -75,3 +75,18 @@ interest = userinput
 for x in range(0, 10):
     fortune = float(amount) * (1 + float(interest)) ** x
     print("Your fortune after ", x, " year(s) is: ", "%.2f" % (fortune))
+
+# exercise 1.6
+
+amount = int(input("Enter amount to be payed: "))
+noof20 = amount // 20
+rest = amount % 20
+noof20 = amount // 10
+rest = amount % 10
+noof20 = amount // 5
+rest = amount % 5
+noof20 = amount // 2
+rest = amount % 2
+noof1 = rest
+print("Moin")
+print()
