@@ -14,11 +14,12 @@ gamenumber = int(usernumber)
 P1 = Pirate(username)
 P2 = Pirate("Kenny Klap For Øjet")
 P3 = Pirate("Torsten Træben")
+P4 = Pirate("Per Pirathat")
 
 
 # Lists
 
-listOfPirates = [P1, P2, P3]
+listOfPirates = [P1, P2, P3, P4]
 listLength = len(listOfPirates)
 
 
@@ -61,7 +62,6 @@ resetPointers()
 
 print("There are", len(listOfPirates), "pirates in the Treasure Game")
 print()
-
 
 showPointers()
 print()
