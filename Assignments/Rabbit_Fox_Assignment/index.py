@@ -42,8 +42,8 @@ for x in range(400):
 
 print()
 
-# print("Rabbit list", xyRabbit)
-# print("Fox list", xyFox)
+print("Rabbit list", xyRabbit)
+print("Fox list", xyFox)
 
 avgRabbit = sum(steadyRabbit)/len(steadyRabbit)
 avgFox = sum(steadyFox)/len(steadyFox)
