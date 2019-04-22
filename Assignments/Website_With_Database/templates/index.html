@@ -1,23 +1,119 @@
 <!DOCTYPE html>
-<!-- Jinja2 is used -->
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
+    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Assignment with DB</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Title -->
+    <title>Python - With DB</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <script src="main.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='scss/main.css') }}">
+    
 </head>
 <body>
-    <h2>Signe hun er ok sej</h2>
-    <br>
-    <img src="{{ user_image }}" alt="User Image">
+    <!-- Container -->
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xs">
+                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
+                    data-target="#changeContent" aria-controls="changeContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span>Change or Add Car</span>
+                </button>
+                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
+                    data-target="#checkSpeed" aria-controls="checkSpeed" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span>Fastest Car</span>
+                </button>
+                <div class="collapse navbar-collapse" id="changeContent">
+                    <h4>Create, Update or Delete a Car:</h4>
+                    <p>(The Car table uses auto increment for the ID)</p>
+                    <form method="post" action="/index">
+                        <label>ID Number: </label>
+                        <input type="text" name="id" value="" />
+                        <br />
+                        <br />
+
+                        <label>Car Model: </label>
+                        <input type="text" name="model" value="" />
+                        <br />
+                        <br />
+
+                        <label>Max Speed: </label>
+                        <input type="text" name="speed" value="" />
+                        <br />
+                        <br />
+
+                        <input class="btn btn-primary" type="submit" name="myaction" value="Create car" />
+                        <input class="btn btn-primary" type="submit" name="myaction" value="Update car" />
+                        <input class="btn btn-primary" type="submit" name="myaction" value="Delete car" />
+                    </form>
+                </div>
+                <div class="collapse navbar-collapse" id="checkSpeed">
+                    <h3>Fastest Car:</h3>
+                    <p>ID Number: {{ carspeed[0] }}</p>
+                    <p>Car Model: {{ carspeed[1] }}</p>
+                    <p>Max Speed: {{ carspeed[2] }}</p>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <!-- Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for row in carlist %}
+                    <li class="ci" data-target="#carouselExampleIndicators" data-slide-to="{{ row[0] }}"></li>
+                    {% endfor %}
+                </ol>
+
+                <div class="carousel-inner">
+                    {% for row in carlist %}
+                    <!-- Carousel slide 1 -->
+                    <div id="slide-{{ row[0] }}" class="carousel-item" data-interval="false"
+                        style="background-image: url(static/images/{{ row[3] }});">
+
+                        <!-- Jumbotron -->
+                        <div class="jumbotron">
+                            <h1 class="display-4">{{ row[1] }}</h1>
+                            <p class="lead">Top Speed: {{ row[2] }}</p>
+                            <hr class="my-4">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Carousel Controllers -->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- My JS -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

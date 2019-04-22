@@ -1,0 +1,14 @@
+.carousel {
+    height: 90vh;
+    width: 100%;
+
+    .carousel-inner {
+        .carousel-item {
+            @include backgrounds;
+            label {
+                display: $block;
+                text-align: $align-center;
+            }
+        }
+    }
+}

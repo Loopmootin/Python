@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="E:\School\WebDev\Python\Flask\WebProjectImage\env"
+VIRTUAL_ENV="C:\Users\Christoffer\Desktop\Job og studie\Studie\Web Development\Python\Assignments\Website_With_Database\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

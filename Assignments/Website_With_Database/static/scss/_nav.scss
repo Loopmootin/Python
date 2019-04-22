@@ -1,0 +1,13 @@
+nav {
+    height: 10vh;
+    width: 100%;
+    z-index: 200;
+
+    .navbar-toggler {
+        margin: $margin-auto !important;
+    }
+
+    .navbar-collapse {
+        background-color: #fff;
+    }
+}
