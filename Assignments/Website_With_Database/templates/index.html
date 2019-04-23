@@ -15,55 +15,52 @@
     
 </head>
 <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xs">
+        <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse" data-target="#changeContent"
+            aria-controls="changeContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span>Change or Add Car</span>
+        </button>
+        <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse" data-target="#checkSpeed"
+            aria-controls="checkSpeed" aria-expanded="false" aria-label="Toggle navigation">
+            <span>Fastest Car</span>
+        </button>
+        <div class="collapse navbar-collapse" id="changeContent">
+            <h4>Create, Update or Delete a Car:</h4>
+            <p>(The Car table uses auto increment for the ID)</p>
+            <form method="post" action="/index">
+                <label>ID Number: </label>
+                <input type="text" name="id" value="" />
+                <br />
+                <br />
+
+                <label>Car Model: </label>
+                <input type="text" name="model" value="" />
+                <br />
+                <br />
+
+                <label>Max Speed: </label>
+                <input type="text" name="speed" value="" />
+                <br />
+                <br />
+
+                <input class="btn btn-primary first-btn" type="submit" name="myaction" value="Create car" />
+                <input class="btn btn-primary" type="submit" name="myaction" value="Update car" />
+                <input class="btn btn-primary" type="submit" name="myaction" value="Delete car" />
+            </form>
+        </div>
+        <div class="collapse navbar-collapse" id="checkSpeed">
+            <h3>Fastest Car:</h3>
+            <p>ID Number: {{ carspeed[0] }}</p>
+            <p>Car Model: {{ carspeed[1] }}</p>
+            <p>Max Speed: {{ carspeed[2] }}</p>
+        </div>
+    </nav>
+
     <!-- Container -->
     <div class="container-fluid">
-
-        <div class="row">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-xs">
-                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
-                    data-target="#changeContent" aria-controls="changeContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span>Change or Add Car</span>
-                </button>
-                <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse"
-                    data-target="#checkSpeed" aria-controls="checkSpeed" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span>Fastest Car</span>
-                </button>
-                <div class="collapse navbar-collapse" id="changeContent">
-                    <h4>Create, Update or Delete a Car:</h4>
-                    <p>(The Car table uses auto increment for the ID)</p>
-                    <form method="post" action="/index">
-                        <label>ID Number: </label>
-                        <input type="text" name="id" value="" />
-                        <br />
-                        <br />
-
-                        <label>Car Model: </label>
-                        <input type="text" name="model" value="" />
-                        <br />
-                        <br />
-
-                        <label>Max Speed: </label>
-                        <input type="text" name="speed" value="" />
-                        <br />
-                        <br />
-
-                        <input class="btn btn-primary" type="submit" name="myaction" value="Create car" />
-                        <input class="btn btn-primary" type="submit" name="myaction" value="Update car" />
-                        <input class="btn btn-primary" type="submit" name="myaction" value="Delete car" />
-                    </form>
-                </div>
-                <div class="collapse navbar-collapse" id="checkSpeed">
-                    <h3>Fastest Car:</h3>
-                    <p>ID Number: {{ carspeed[0] }}</p>
-                    <p>Car Model: {{ carspeed[1] }}</p>
-                    <p>Max Speed: {{ carspeed[2] }}</p>
-                </div>
-            </nav>
-        </div>
-
+            
         <div class="row">
             <!-- Carousel -->
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">

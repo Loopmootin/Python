@@ -1,9 +1,17 @@
 form {
     margin-top: $push-top;
 
+    label {
+        margin-left: 43%;
+    }
+
     .btn-primary {
         display: inline-block;
         margin: 1em;
         width: 20%;
+
+        &.first-btn {
+            margin-left: 17%
+        }
     }
 }

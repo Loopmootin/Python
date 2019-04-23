@@ -3,14 +3,10 @@
 }
 
 @mixin stylish-button {
-    background-color: $my-brand;
     border: none;
     padding: $button-padding;
-    border-radius: 400px;
-
-    &:hover {
-        background-color: lighten($my-brand, 20%);
-    }
+    height: 100%;
+    border-radius: 0;
 }
 
 @mixin mail-input {
@@ -23,7 +19,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
     width: $full-width;
 }
 

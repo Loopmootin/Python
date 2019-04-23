@@ -10572,30 +10572,28 @@ p {
 }
 
 .modal-content {
-  background: -webkit-gradient(linear, left top, left bottom, from(#c4c4c4), to(#5e638d));
-  background: linear-gradient(#c4c4c4, #5e638d);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#757baf));
+  background: linear-gradient(#f8f8f8, #757baf);
   color: #fff;
   border: none;
 }
 
 .modal-content .modal-footer .btn-secondary {
-  background-color: #2b2a66;
   border: none;
   padding: 10px 15px;
-  border-radius: 400px;
-}
-
-.modal-content .modal-footer .btn-secondary:hover {
-  background-color: #4948ae;
+  height: 100%;
+  border-radius: 0;
 }
 
 .jumbotron {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(221, 221, 221, 0.5)), to(rgba(117, 123, 175, 0.5)));
-  background: linear-gradient(rgba(221, 221, 221, 0.5), rgba(117, 123, 175, 0.5));
+  background-color: rgba(248, 248, 248, 0.6);
   width: 60%;
   min-width: 300px;
-  margin: 0px auto;
-  margin-top: 20px;
+  margin-bottom: 20%;
+}
+
+.jumbotron p {
+  font-weight: 500;
 }
 
 .jumbotron a {
@@ -10605,18 +10603,36 @@ p {
   max-width: 200px;
 }
 
-nav {
+.navbar {
   height: 10vh;
   width: 100%;
   z-index: 200;
+  padding: 0;
+  position: absolute;
+  background-color: rgba(248, 248, 248, 0.6);
 }
 
-nav .navbar-toggler {
-  margin: 0px auto !important;
+.navbar .navbar-toggler {
+  width: 50%;
+  background-color: none;
+  color: #2b2a66;
 }
 
-nav .navbar-collapse {
-  background-color: #fff;
+.navbar .navbar-toggler:hover {
+  background-color: #f8f8f8;
+}
+
+.navbar .navbar-collapse {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.navbar .navbar-collapse h3 {
+  text-align: center;
+}
+
+.navbar .navbar-collapse h4 {
+  text-align: center;
 }
 
 .container-fluid {
@@ -10624,7 +10640,7 @@ nav .navbar-collapse {
 }
 
 .carousel {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -10632,8 +10648,17 @@ nav .navbar-collapse {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .carousel .carousel-inner .carousel-item label {
@@ -10645,20 +10670,24 @@ form {
   margin-top: 20px;
 }
 
+form label {
+  margin-left: 43%;
+}
+
 form .btn-primary {
   display: inline-block;
   margin: 1em;
   width: 20%;
 }
 
-.btn-primary {
-  background-color: #2b2a66;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 400px;
+form .btn-primary.first-btn {
+  margin-left: 17%;
 }
 
-.btn-primary:hover {
-  background-color: #4948ae;
+.btn-primary {
+  border: none;
+  padding: 10px 15px;
+  height: 100%;
+  border-radius: 0;
 }
 /*# sourceMappingURL=main.css.map */

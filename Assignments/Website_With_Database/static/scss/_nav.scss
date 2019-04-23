@@ -1,13 +1,31 @@
-nav {
+.navbar {
     height: 10vh;
     width: 100%;
     z-index: 200;
+    padding: 0;
+    position: absolute;
+    background-color: $my-gray-opas;
 
     .navbar-toggler {
-        margin: $margin-auto !important;
+        width: 50%;
+        background-color: none;
+        color: #2b2a66;
+
+        &:hover {
+            background-color: $my-gray;
+        }
     }
 
     .navbar-collapse {
-        background-color: #fff;
+        background-color: $my-gray;
+        padding: 20px;
+
+        h3 {
+            text-align: center;
+        }
+
+        h4 {
+            text-align: center;
+        }
     }
 }

@@ -1,10 +1,13 @@
 
 .jumbotron {
-    @include my-gradient;
+    background-color: $my-gray-opas;
     width: 60%;
     min-width: $min-width + 50px;
-    margin: $margin-auto;
-    margin-top: $push-top;
+    margin-bottom: 20%;
+
+    p {
+        font-weight: 500;
+    }
 
     a {
         margin: $margin-auto;
