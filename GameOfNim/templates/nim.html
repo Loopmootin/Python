@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Jinja2 is used -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ title }}</title>
+    </head>
+    <body onload="document.myform.mytake.focus()">
+        <h3>Play Nim with the computer</h3>
+        <h3>Initially the computer knows only the rules - not the strategies</h3>
+        <h3>Take 1, 2 or 3 from the pile</h3>
+        <h3>The player who takes the last item wins</h3>
+
+        <form name="myform" method="POST" action="/">
+            <p>Game history</p>
+
+            <p>How many do you take?</p>
+            <input name="mytake">
+            
+            {% for line in history %}
+                {{ line }}
+                <br>
+            {% endfor %}
+            
+            <br>
+
+            <input name="myaction" value="Send" type="submit" {{ disabled }}>
+            <input name="myaction" value="Reset" type="submit">
+        </form>
+    </body>
+</html>
