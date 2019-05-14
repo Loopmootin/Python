@@ -20,6 +20,7 @@ class Die:
     def getScores(self):
         return self._scores
 
+    # toString
     def toString(self):
         return self._color + " die has the sides " + str(self._sides)
         + " and an empty score list " + str(self._scores)
