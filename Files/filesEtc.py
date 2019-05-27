@@ -7,8 +7,8 @@ from classes import Dog
 
 outfile = open("mytextfile", "w")
 outfile.write(str(6.0) + "\n")
-outfile.write(str(7.3)  + "\n")
-outfile.write(str(14.0)  + "\n")
+outfile.write(str(7.3) + "\n")
+outfile.write(str(12.0) + "\n")
 outfile.close()
 
 infile = open("mytextfile", "r")

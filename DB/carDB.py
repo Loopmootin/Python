@@ -3,7 +3,10 @@ import pyodbc  # installed by pip
 print("Before open connection")
 print()
 
-conn = pyodbc.connect(Trusted_Connection='yes', driver='{SQL Server}', server='LAPTOP-A8BTI830', database='RabbitDB')
+conn = pyodbc.connect(Trusted_Connection='yes',
+                      driver='{SQL Server}',
+                      server='LAPTOP-A8BTI830',
+                      database='RabbitDB')
 
 cursor = conn.cursor()
 cursor.execute("SELECT * FROM Owner")
