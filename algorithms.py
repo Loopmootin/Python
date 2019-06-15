@@ -97,8 +97,8 @@ def tower(n, i, j):
 
 # Try Tower of Hanoi
 count = 0
-n = 15
-print("Moove Tower of Hanoi with " + str(n) + " discs from stick 1 to stick 3")
+n = 3
+print("Move Tower of Hanoi with " + str(n) + " discs from stick 1 to stick 3")
 
 tower(n, 1, 3)
 print("Finished after " + str(count) + " moves")

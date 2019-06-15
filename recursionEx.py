@@ -13,7 +13,7 @@ def factorialdetailed(n):
     if n == 1:
         return 1
     else:
-        res = n * factorial(n-1)
+        res = n * factorialdetailed(n-1)
         print("intermediate result for ", n, " * factorial(", n-1, "): ", res)
         return res	
 

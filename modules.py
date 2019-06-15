@@ -12,13 +12,17 @@ print()
 
 # sys
 
-def hello():
-    print("Yout name: ")
-    # name = sys.stdin.readline().strip('\n')
-    # print("Hello", name)
+def hello(name):
+    print("Your name: " + name)
+    # name = sys.stdin.readline()
+    print("Hello", name)
 
-hello()
+
+hello("Chris")
 print()
+
+
+print(sys.version)
 
 
 # math
