@@ -23,10 +23,10 @@ textentry = Entry(mycanvas)
 mycanvas.create_window(20, 60, anchor=NW, window=textentry, height=20, width=80)
 
 # button
-button1 = Button(mycanvas, text="Echo input", command = echo)
+button1 = Button(mycanvas, text="Echo input", command=echo)
 mycanvas.create_window(20, 20, anchor=NW, window=button1)
 
-button2 = Button(mycanvas, text="Enable echo button", command = getReady)
+button2 = Button(mycanvas, text="Enable echo button", command=getReady)
 button2.config(state=DISABLED)
 mycanvas.create_window(120, 20, anchor=NW, window=button2)
 

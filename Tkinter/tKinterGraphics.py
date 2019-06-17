@@ -19,9 +19,9 @@ def chess(chesscanvas):
     for i in range(0, 8):
         for j in range(0, 8):
             if (i + j) % 2 == 1:
-                chesscanvas.create_rectangle(x+j*21.2, y+i*21.2, 21.2+x+j*21.2, 21.2+y+i*21.2, fill="black", outline="black") 
+                chesscanvas.create_rectangle(x+j*21.2, y+i*21.2, 21.2+x+j*21.2, 21.2+y+i*21.2, fill="black", outline="black")
             else:
-                chesscanvas.create_rectangle(x+j*21.2, y+i*21.2, 21.2+x+j*21.2, 21.2+y+i*21.2, fill="white", outline="white") 
+                chesscanvas.create_rectangle(x+j*21.2, y+i*21.2, 21.2+x+j*21.2, 21.2+y+i*21.2, fill="white", outline="white")
 
 
 def closeclick(event):

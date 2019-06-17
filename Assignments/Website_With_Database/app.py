@@ -1,3 +1,7 @@
+# cd Assignments
+# cd Website_With_Database
+# python -m flask run
+
 from flask import Flask, render_template, request
 import pyodbc
 import os

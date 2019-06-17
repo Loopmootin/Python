@@ -36,10 +36,12 @@ def resetPointers():
             listOfPirates[i].setPointer(listOfPirates[0]._name)
             if listOfPirates[i]._name == listOfPirates[0]._name:
                 if listOfPirates[i]._name == username:
-                    print("You're the last one left, congratulations", listOfPirates[i]._name)
+                    print("You're the last one left, congratulations",
+                          listOfPirates[i]._name)
                     exit()
                 else:
-                    print("Awww you didn't win, but better luck next time! The winner is", listOfPirates[i]._name)
+                    print("Awww you didn't win, but better luck next time! The winner is",
+                          listOfPirates[i]._name)
                     exit()
         else:
             print("Can i get some rum?")
@@ -50,7 +52,10 @@ def showPointers():
 
     for p in listOfPirates:
         if x <= listLength:
-            print("This pirate is called", listOfPirates[x].getName(), "and he points to pirate", listOfPirates[x].getPointer())
+            print("This pirate is called",
+                  listOfPirates[x].getName(),
+                  "and he points to pirate",
+                  listOfPirates[x].getPointer())
             x = x + 1
         else:
             print("Can i get some kebab?")
@@ -82,12 +87,16 @@ while listLength > 1:
         index = listOfPirates.index(pirateJump)
 
     print()
-    print("And the pirate that has to jump is number", index, "who is", listOfPirates[index]._name)
+    print("And the pirate that has to jump is number",
+          index,
+          "who is",
+          listOfPirates[index]._name)
     print()
     listOfPirates.pop(index)
 
     listLength = len(listOfPirates)
-    print("There are", len(listOfPirates), "pirates left in the Treasure Game")
+    print("There are", len(listOfPirates),
+          "pirates left in the Treasure Game")
     print()
 
     resetPointers()
